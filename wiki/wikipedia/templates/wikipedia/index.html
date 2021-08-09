@@ -15,17 +15,12 @@
         <input type="submit">
     </form>
     <ul>
-        <li>Home</li>
+        <li><a href="{url 'index'}">Home Page</a></li>
         <li>Create New Page</li>
         <li>Random Page</li>
     </ul>
     <h2>All Pages</h2>
     <ul>
-        <li> <a href="{% url 'css' %}">CSS</a> </li>
-        <li><a href="{% url 'Django' %}">Django</a> </li>
-        <li><a href="{% url 'git' %}">Git</a> </li>
-        <li><a href="{% url 'html' %}">Html</a> </li>
-        <li> <a href="{% url 'python' %}">Python</a> </li>
         {%for task in tasks%}
             <li> <a href=/wikipedia/{{task}}>{{task}}</a></li>
         {%endfor%}    

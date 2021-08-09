@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+tasks = ['a','b','c']
 # Create your views here.
 def index(request):
-    return render(request, 'wikipedia/index.html')
+    return render(request, 'wikipedia/index.html',{
+        'tasks': tasks
+    })
 def css(request):
     return render(request, 'wikipedia/css.html')
 def html(request):

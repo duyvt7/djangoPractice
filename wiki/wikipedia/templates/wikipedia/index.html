@@ -10,7 +10,9 @@
     <h1>Wikipedia</h1>
 
     <form action="">
+        {%csrf_token%}
         <input type="text" placeholder="Search Encyclopedia">
+        <input type="submit">
     </form>
     <ul>
         <li>Home</li>
@@ -24,6 +26,10 @@
         <li><a href="{% url 'git' %}">Git</a> </li>
         <li><a href="{% url 'html' %}">Html</a> </li>
         <li> <a href="{% url 'python' %}">Python</a> </li>
+        {%for task in tasks%}
+            <li>{{task}}</li>
+        {%endfor%}    
     </ul>
+    
 </body>
 </html>

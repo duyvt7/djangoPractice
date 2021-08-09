@@ -27,7 +27,7 @@
         <li><a href="{% url 'html' %}">Html</a> </li>
         <li> <a href="{% url 'python' %}">Python</a> </li>
         {%for task in tasks%}
-            <li>{{task}}</li>
+            <li> <a href=/wikipedia/{{task}}>{{task}}</a></li>
         {%endfor%}    
     </ul>
     
